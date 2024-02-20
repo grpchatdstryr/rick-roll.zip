@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rick Roll</title>
+<link rel="icon" type="image/x-icon" href="images/Rick.png">
+</head>
+<body>
+
+<button onclick="downloadLocalZIP('rick-roll.zip')">Download File</button>
+
+<script>
+function downloadLocalZIP(fileName) {
+    const link = document.createElement('a');
+    link.href = fileName; 
+    link.download = fileName;
+    link.style.display = 'none'; 
+    document.body.appendChild(link);
+    link.click(); 
+    document.body.removeChild(link); 
+}
+</script>
+
+</body>
+</html>
